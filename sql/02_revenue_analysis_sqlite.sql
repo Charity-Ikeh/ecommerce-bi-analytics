@@ -13,9 +13,13 @@ FROM online_retail_clean;
 
 ------------------------------------------------
 
--- 2. Monthly Revenue (SQLite date formatting)
+-- 2. Monthly Revenue (SQLite date conversion)
 SELECT
-    strftime('%Y-%m-01', InvoiceDate) AS invoice_month,
+    strftime('%Y-%m-01',
+        substr(InvoiceDate, 7, 4) || '-' ||
+        substr(InvoiceDate, 4, 2) || '-' ||
+        substr(InvoiceDate, 1, 2)
+    ) AS invoice_month,
     SUM(Quantity * UnitPrice) AS monthly_revenue
 FROM online_retail_clean
 GROUP BY invoice_month

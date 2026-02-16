@@ -83,6 +83,29 @@ This shows which countries generate the most revenue.
 
 ![Revenue by Country](images/revenue_by_country.png)
 
+---
+
+## Customer Analysis
+
+### Total Unique Customers
+This calculates the total number of distinct customers after cleaning the dataset.
+
+![Total Unique Customers](images/total_unique_customers.png)
+
+---
+
+### Top 10 Customers by Revenue
+This identifies the highest revenue-generating customers.
+
+![Top 10 Customers](images/top_10_customers_by_revenue.png)
+
+---
+
+### Average Revenue Per Customer
+This measures customer value by dividing total revenue by total customers.
+
+![Average Revenue Per Customer](images/avg_revenue_per_customer.png)
+
 
 ## Key Insights (to be updated)
 - Revenue varies by month, indicating seasonality.

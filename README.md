@@ -107,11 +107,14 @@ This measures customer value by dividing total revenue by total customers.
 ![Average Revenue Per Customer](images/avg_revenue_per_customer.png)
 
 
-## Key Insights (to be updated)
-- Revenue varies by month, indicating seasonality.
-- A small share of products/customers drives a large share of revenue.
-- Repeat purchase behavior indicates retention opportunities.
-- Revenue concentration by country highlights core markets.
+## Key Insights 
+
+- Revenue varies by month, indicating strong seasonality patterns.
+- A small percentage of products and customers generate a large share of total revenue (revenue concentration effect).
+- The United Kingdom dominates total revenue, confirming it as the core market.
+- Revenue is concentrated among high-value customers, highlighting the importance of customer retention strategies.
+- Average revenue per customer provides a benchmark for estimating customer lifetime value.
+
 
 ## Next Improvements
 - Add cohort retention view by month

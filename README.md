@@ -50,8 +50,42 @@ Transactional dataset containing invoice-level purchases (InvoiceNo, StockCode, 
 - **Power BI dashboard + screenshots:** `/powerbi` and `/images`
 - **Executive summary (1 page):** `/reports`
 
+## Revenue Analysis (SQLite)
+
+### Total Revenue
+Total revenue was calculated using:
+SUM(Quantity * UnitPrice)
+
+This shows the overall sales after cleaning invalid records.
+
+![Total Revenue](images/total_revenue.png)
+
+---
+
+### Monthly Revenue
+Monthly revenue was calculated using SQLite date functions to group sales by month.
+
+This helps identify sales trends over time.
+
+![Monthly Revenue](images/monthly_revenue.png)
+
+---
+
+### Top 10 Products by revenue
+This identifies the highest revenue generating products.
+
+![Top 10 Products by revenue](images/top_10_products_by_revenue.png)
+
+---
+
+### Revenue by Country
+This shows which countries generate the most revenue.
+
+![Revenue by Country](images/revenue_by_country.png)
+
+
 ## Key Insights (to be updated)
-- Revenue varies by month indicating seasonality.
+- Revenue varies by month, indicating seasonality.
 - A small share of products/customers drives a large share of revenue.
 - Repeat purchase behavior indicates retention opportunities.
 - Revenue concentration by country highlights core markets.

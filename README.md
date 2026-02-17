@@ -17,6 +17,22 @@ The analysis was performed using:
 
 The analytical approach and insights are applicable to global e-commerce businesses across different markets.
 
+---
+
+## Problem Statement
+
+E-commerce businesses generate large volumes of transactional data.  
+However, without structured analysis, it becomes difficult to clearly understand revenue drivers, customer purchasing behavior, and retention patterns.
+
+This project simulates a real-world Business Intelligence workflow by transforming raw transactional data into structured, actionable business insights.
+
+
+## Scope & Limitations
+This project focuses on descriptive and diagnostic analytics using SQL (SQLite) and exploratory analysis.
+
+No predictive modeling or advanced machine learning techniques were applied.  
+The objective was to strengthen core Business Intelligence foundations such as data cleaning, KPI aggregation, trend analysis, and business insight generation.
+
 
 ## Business Questions
 - What is total revenue, total orders, total customers, and average order value (AOV)?
@@ -67,10 +83,13 @@ Transactional dataset containing invoice-level purchases (InvoiceNo, StockCode, 
    - Retention/Funnel page
 
 ## Deliverables
-- **SQL scripts:** `/sql`
-- **Python notebooks:** `/python`
-- **Power BI dashboard + screenshots:** `/powerbi` and `/images`
-- **Executive summary (1 page):** `/reports`
+
+- SQL scripts → `/sql`
+- Python notebooks → `/python`
+- Power BI dashboard → `/powerbi`
+- Dashboard screenshots → `/images`
+- Executive summary → `/reports`
+  
 
 ## Revenue Analysis (SQLite)
 
@@ -153,6 +172,19 @@ If implemented in a real e-commerce business, these findings could support:
 - Add cohort retention view by month
 - Enhance dashboard design using a consistent theme and layout
 - Add basic RFM segmentation summary to support targeted retention strategies
+
+
+## Professional Relevance
+
+This project reflects practical Business Intelligence and Data Analytics capabilities applicable across:
+
+- E-commerce
+- Retail analytics
+- Customer performance analysis
+- Revenue and KPI reporting environments
+
+The workflow demonstrates readiness for analytical roles requiring structured SQL querying, performance reporting, and business-focused data interpretation.
+
 
 ---
 

@@ -1,7 +1,22 @@
 # E-Commerce Business Intelligence Analytics (SQL + Python + Power BI)
 
 ## Project Overview
-This project presents an end-to-end Business Intelligence case study using an online retail transactions dataset. The goal is to understand sales performance, customer purchasing behavior, and retention opportunities through a structured workflow: SQL analysis → Python EDA → Power BI dashboard → executive recommendations.
+
+This project presents an end-to-end Business Intelligence case study using an online retail transactions dataset.
+
+The objective was to:
+- Clean transactional sales data
+- Analyze revenue performance
+- Identify high-value products and customers
+- Extract actionable business insights
+
+The analysis was performed using:
+- **SQLite (SQL queries)**
+- **Python (Exploratory Data Analysis)**
+- **Power BI (Dashboard design)**
+
+The analytical approach and insights are applicable to global e-commerce businesses across different markets.
+
 
 ## Business Questions
 - What is total revenue, total orders, total customers, and average order value (AOV)?
@@ -15,10 +30,17 @@ Transactional dataset containing invoice-level purchases (InvoiceNo, StockCode, 
 
 > Note: Dataset used for learning and portfolio demonstration. No personal or confidential business data is included.
 
-## Tools Used
-- SQL (business KPI queries)
-- Python (pandas for cleaning + EDA)
-- Power BI (dashboarding + KPI visualization)
+
+## Skills Demonstrated
+
+- SQL (SQLite) – Data cleaning, filtering, aggregation
+- Revenue & KPI analysis
+- Customer revenue concentration analysis
+- Date transformation & grouping
+- Business insight generation
+- Analytical storytelling
+- Dashboard-ready data preparation
+- Business interpretation of data
 
 ## Workflow (Real-world Style)
 1. **Data Cleaning**
@@ -116,7 +138,33 @@ This measures customer value by dividing total revenue by total customers.
 - Average revenue per customer provides a benchmark for estimating customer lifetime value.
 
 
+## Business Impact Interpretation
+
+If implemented in a real e-commerce business, these findings could support:
+
+- Seasonal demand forecasting
+- Inventory optimization
+- High-value customer retention strategies
+- Geographic market prioritization
+- Revenue growth planning
+
+
 ## Next Improvements
 - Add cohort retention view by month
 - Enhance dashboard design using a consistent theme and layout
 - Add basic RFM segmentation summary to support targeted retention strategies
+
+---
+
+## Continuous Learning
+
+This project is part of my transition into Data Analytics and Business Intelligence.
+
+It reflects hands-on development of:
+- SQL query writing
+- Data transformation
+- Revenue performance analysis
+- Customer segmentation thinking
+- BI dashboard preparation
+
+The goal is to strengthen technical and analytical skills while building a globally relevant BI portfolio.

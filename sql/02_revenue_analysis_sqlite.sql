@@ -1,47 +1,60 @@
 /*
-========================================
+================================================
 02 - REVENUE ANALYSIS (SQLite)
 E-Commerce BI Analytics Project
 Author: Charity Ikeh
-========================================
+================================================
 */
 
 -- 1. Total Revenue
 SELECT
-    SUM(Quantity * UnitPrice) AS total_revenue
-FROM online_retail_clean;
+    ROUND(SUM(Revenue), 2) AS total_revenue
+FROM online_retail_cleaned;
+-- Result: 104053.87
 
 ------------------------------------------------
 
--- 2. Monthly Revenue (SQLite date conversion)
+-- 2. Total Orders
 SELECT
-    strftime('%Y-%m-01',
-        substr(InvoiceDate, 7, 4) || '-' ||
-        substr(InvoiceDate, 4, 2) || '-' ||
-        substr(InvoiceDate, 1, 2)
-    ) AS invoice_month,
-    SUM(Quantity * UnitPrice) AS monthly_revenue
-FROM online_retail_clean
-GROUP BY invoice_month
-ORDER BY invoice_month;
+    COUNT(DISTINCT InvoiceNo) AS total_orders
+FROM online_retail_cleaned;
+-- Result: 259
 
 ------------------------------------------------
 
--- 3. Top 10 Products by Revenue
+-- 3. Average Order Value
+SELECT
+    ROUND(SUM(Revenue) / COUNT(DISTINCT InvoiceNo), 2) AS avg_order_value
+FROM online_retail_cleaned;
+-- Result: 401.75
+
+------------------------------------------------
+
+-- 4. Monthly Revenue
+SELECT
+    InvoiceMonth,
+    ROUND(SUM(Revenue), 2) AS monthly_revenue
+FROM online_retail_cleaned
+GROUP BY InvoiceMonth
+ORDER BY InvoiceMonth;
+
+------------------------------------------------
+
+-- 5. Top 10 Products by Revenue
 SELECT
     Description,
-    SUM(Quantity * UnitPrice) AS product_revenue
-FROM online_retail_clean
+    ROUND(SUM(Revenue), 2) AS product_revenue
+FROM online_retail_cleaned
 GROUP BY Description
 ORDER BY product_revenue DESC
 LIMIT 10;
 
 ------------------------------------------------
 
--- 4. Revenue by Country
+-- 6. Revenue by Country
 SELECT
     Country,
-    SUM(Quantity * UnitPrice) AS country_revenue
-FROM online_retail_clean
+    ROUND(SUM(Revenue), 2) AS country_revenue
+FROM online_retail_cleaned
 GROUP BY Country
 ORDER BY country_revenue DESC;

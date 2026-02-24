@@ -1,19 +1,29 @@
 /*
-========================================
-01 - CREATE CLEAN VIEW (SQLite)
+================================================
+01 - DATA VERIFICATION (SQLite)
 E-Commerce BI Analytics Project
 Author: Charity Ikeh
-========================================
+================================================
+Data cleaning was performed in Python.
+This file verifies the cleaned dataset loaded
+correctly into SQLite before analysis begins.
+================================================
 */
 
-DROP VIEW IF EXISTS online_retail_clean;
+-- Verify row count matches cleaned CSV
+SELECT COUNT(*) AS total_rows 
+FROM online_retail_cleaned;
+-- Expected: 4917
 
-CREATE VIEW online_retail_clean AS
-SELECT *
-FROM online_retail
-WHERE InvoiceNo NOT LIKE 'C%'
-  AND Quantity > 0
-  AND UnitPrice > 0
-  AND CustomerID IS NOT NULL;
+-- Preview first 10 rows
+SELECT * 
+FROM online_retail_cleaned 
+LIMIT 10;
 
-
+-- Confirm all key columns are present
+SELECT 
+    COUNT(*) AS total_rows,
+    COUNT(DISTINCT InvoiceNo) AS unique_invoices,
+    COUNT(DISTINCT CustomerID) AS unique_customers,
+    COUNT(DISTINCT Country) AS unique_countries
+FROM online_retail_cleaned;
